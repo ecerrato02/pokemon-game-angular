@@ -17,10 +17,11 @@ export class GameComponent implements OnInit {
   private _pokemons: Pokemon[] = [];
   private _pokemon!: Pokemon;
 
+
   get score(): number {
     return this.playerService.score;
   }
-  
+
   get hearts(): Array<any> {
     return Array(this.playerService.lifes);
   }
@@ -68,7 +69,7 @@ export class GameComponent implements OnInit {
       this.playerService.decreaseLifes();
       console.log('incorrect');
     }
-    
+
   }
 
   // this function es execute every time that user click in next game
@@ -88,5 +89,13 @@ export class GameComponent implements OnInit {
       this.loaded = true;
     }
   }
-
+  rotateImage() {
+    // Verifica que la imagen esté seleccionada antes de realizar la rotación
+    if (this.selected) {
+      const pokemonImageView = document.querySelector('.pokemon-image');
+      if (pokemonImageView) {
+        pokemonImageView.classList.toggle('flipped');
+      }
+    }
+  }
 }

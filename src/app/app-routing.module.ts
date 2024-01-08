@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
+import {IniciarSessioCerratoComponent} from './pages/iniciar-sessio-cerrato/iniciar-sessio-cerrato.component'
 
 const routes: Routes = [
+  {path:'',
+    component: IniciarSessioCerratoComponent},
   {
     path: 'home',
     component: HomeComponent
