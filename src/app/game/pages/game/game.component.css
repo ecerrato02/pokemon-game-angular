@@ -1,17 +1,3 @@
-.pokemon-image.flipped {
-  transform: scaleX(-1);
-}
-
-.pokemon-image.flipped img {
-  transform: scaleX(-1);
-}
-.pokemon-image.flipped {
-  transform: scaleX(-1);
-}
-
-.pokemon-image.flipped img {
-  transform: scaleX(-1);
-}
 ul {
     list-style: none;
     padding: 0;
