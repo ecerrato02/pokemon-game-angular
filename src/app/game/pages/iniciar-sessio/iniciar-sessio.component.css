@@ -1,0 +1,25 @@
+#jugador{
+  position: relative;
+  top: 10.3em;
+  left: 40%;
+}
+
+#jugadors{
+  position: relative;
+  top: 8.5em;
+  left: 46%;
+}
+
+#jugarboto{
+  position: relative;
+  top: 5em;
+  left: 59%;
+  color: white;
+  background-color: darkslateblue;
+  padding: 10px;
+  min-width: 250px;
+  border-radius: 15px;
+  border: 1px;
+  box-shadow: 0 3px 5px rgb(190, 190, 190);
+  font-size: 16px;
+}

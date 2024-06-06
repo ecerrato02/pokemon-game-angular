@@ -50,6 +50,7 @@ export class GameComponent implements OnInit {
   constructor(
     private playerService: PlayerService,
     private pokemonService: PokemonService
+
   ) { }
 
   ngOnInit(): void {
@@ -90,12 +91,9 @@ export class GameComponent implements OnInit {
     }
   }
   rotateImage() {
-    // Verifica que la imagen esté seleccionada antes de realizar la rotación
-    if (this.selected) {
-      const pokemonImageView = document.querySelector('.pokemon-image');
-      if (pokemonImageView) {
-        pokemonImageView.classList.toggle('flipped');
-      }
-    }
+    console.log("hola")
+    //@ts-ignore
+    let dibujo = document.getElementById("rotacion").value
+   dibujo.style.transform = "rotate(180deg)";
   }
 }

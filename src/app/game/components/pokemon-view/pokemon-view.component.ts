@@ -20,10 +20,17 @@ export class PokemonViewComponent implements OnInit {
   @Input() width: number = 0;
   @Input() height: number = 0;
   @Input() adjust: boolean = false;
+  rotacion: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  rotar(){
+      this.rotacion = this.rotacion - 180;
+
+
+    console.log(this.rotacion);
   }
 
 }

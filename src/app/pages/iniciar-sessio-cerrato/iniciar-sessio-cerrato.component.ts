@@ -13,6 +13,7 @@ export class IniciarSessioCerratoComponent implements OnInit {
     if (this.nombre.trim() !== '') {
       this.nombres.push(this.nombre);
       this.nombre = '';
+
     }
   }
 
