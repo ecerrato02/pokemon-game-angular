@@ -1,17 +1,13 @@
 <form>
-  <div fxLayout="row" fxLayoutAlign="space-around">
-    <div>
-      <h3>JUGADOR: , Puntiació: </h3>
-    </div>
+  <div *ngFor="let nombre of nombres" class="left" fxLayout="row" fxLayoutAlign="space-around">
+    <ul>
+      <h3>Nombre: {{nombre}}</h3>
+    </ul>
   </div>
-<div fxLayout="row" fxLayoutAlign="space-around">
-    <div>
-      <h3>JUGADOR: , Puntació: </h3>
-    </div>
+  <div *ngFor="let puntos of puntuaciones" class="right" fxLayout="row" fxLayoutAlign="space-around">
+    <ul>
+      <h3>Puntos: {{puntos}}</h3>
+    </ul>
   </div>
-<div fxLayout="row" fxLayoutAlign="space-around">
-    <div>
-      <h3>JUGADOR: , Puntuació: </h3>
-    </div>
-  </div>
+
 </form>

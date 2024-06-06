@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UsuariosService} from "../usuarios.service";
 
 @Component({
   selector: 'app-iniciar-sessio-cerrato',
@@ -6,18 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./iniciar-sessio-cerrato.component.css']
 })
 export class IniciarSessioCerratoComponent implements OnInit {
-  nombres: string[] = [];
   nombre: string = '';
 
-  agregarNombre() {
-    if (this.nombre.trim() !== '') {
-      this.nombres.push(this.nombre);
-      this.nombre = '';
+  guardar() {
+    // @ts-ignore
+    this.nombre = document.getElementById('nombreJugador').value;
+    // console.log(this.nombre);
+    // @ts-ignore
+    // console.log(document.getElementById('nombreJugador').value)
 
-    }
+    this.UsuariosService.guardarNombre(this.nombre);
   }
 
-  constructor() {
+
+  constructor(private UsuariosService: UsuariosService) {
 
   }
 

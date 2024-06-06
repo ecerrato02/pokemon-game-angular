@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UsuariosService} from "../../../pages/usuarios.service";
 
 @Component({
   selector: 'app-scores',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scores.component.css']
 })
 export class ScoresComponent implements OnInit {
+puntuaciones: any [] = [];
+nombres: string [] = [];
 
-  constructor() { }
+printNombres(){
+  this.nombres = this.UsuariosService.getAllUsuarios();
+}
+printScores(){
+  this.puntuaciones = this.UsuariosService.getAllScores();
+
+}
+
+
+  constructor(private UsuariosService: UsuariosService) { }
 
   ngOnInit(): void {
+  this.printNombres();
+  this.printScores();
   }
 
 }
