@@ -8,11 +8,13 @@ import {UsuariosService} from "../../../pages/usuarios.service";
   styleUrls: ['./gameover.component.css']
 })
 export class GameoverComponent implements OnInit {
-
+puntos: number = 0
   get score(): number {
     this.UsuariosService.setPuntuacion(this.playerService.score);
     this.UsuariosService.guardarScore();
-    return this.playerService.score;
+    this.puntos = this.playerService.score + this.UsuariosService.puntos
+    console.log(this.puntos);
+    return this.puntos;
   }
 
   get highScore(): number {

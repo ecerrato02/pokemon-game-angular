@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     this.nombre = this.UsuariosService.getNom()
   }
   pillarPuntuacion(){
-    this.puntuacion = this.UsuariosService.getPuntuacion()
+    this.puntuacion = this.UsuariosService.getPuntosIniciales()
   }
   constructor(    private UsuariosService: UsuariosService
   ) { }

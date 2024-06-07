@@ -8,15 +8,18 @@ import {UsuariosService} from "../usuarios.service";
 })
 export class IniciarSessioCerratoComponent implements OnInit {
   nombre: string = '';
+  puntos: number = 0;
 
   guardar() {
     // @ts-ignore
     this.nombre = document.getElementById('nombreJugador').value;
     // console.log(this.nombre);
     // @ts-ignore
-    // console.log(document.getElementById('nombreJugador').value)
+    this.puntos = document.getElementById('punts').value;
+    console.log(this.puntos)
 
     this.UsuariosService.guardarNombre(this.nombre);
+    this.UsuariosService.guardarPuntos(this.puntos);
   }
 
 

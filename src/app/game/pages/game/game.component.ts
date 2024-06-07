@@ -3,6 +3,7 @@ import { getRandomItem } from 'src/app/helpers/random.helper';
 import { Pokemon } from '../../interfaces/pokemon.interface';
 import { PlayerService } from '../../services/player.service';
 import { PokemonService } from '../../services/pokemon.service';
+import {UsuariosService} from "../../../pages/usuarios.service";
 
 @Component({
   selector: 'app-game',
@@ -16,10 +17,17 @@ export class GameComponent implements OnInit {
   private _pokemonSelected: string = '';
   private _pokemons: Pokemon[] = [];
   private _pokemon!: Pokemon;
+  puntos: number = 0
+  nombre: string = ''
 
+
+  getnombre(){
+    this.nombre = this.UsuariosService.getNom()
+  }
 
   get score(): number {
-    return this.playerService.score;
+    this.puntos = this.playerService.score
+    return this.puntos;
   }
 
   get hearts(): Array<any> {
@@ -49,13 +57,15 @@ export class GameComponent implements OnInit {
 
   constructor(
     private playerService: PlayerService,
-    private pokemonService: PokemonService
+    private pokemonService: PokemonService,
+    private UsuariosService: UsuariosService
 
   ) { }
 
   ngOnInit(): void {
     this.playerService.resetGame();
     this.newGame();
+    this.getnombre()
   }
 
   onSelect(pokemonName: string) {
@@ -90,10 +100,5 @@ export class GameComponent implements OnInit {
       this.loaded = true;
     }
   }
-  rotateImage() {
-    console.log("hola")
-    //@ts-ignore
-    let dibujo = document.getElementById("rotacion").value
-   dibujo.style.transform = "rotate(180deg)";
-  }
+
 }

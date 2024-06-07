@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as colorette from "colorette";
 
 @Component({
   selector: 'app-pokemon-view',
@@ -20,17 +21,19 @@ export class PokemonViewComponent implements OnInit {
   @Input() width: number = 0;
   @Input() height: number = 0;
   @Input() adjust: boolean = false;
-  rotacion: number = 0;
+
+  color: string = 'red'
 
   constructor() { }
-
+  cambio(){
+    this.width = 100
+    this.height = 100
+  }
+  cambiocolor(){
+    return this.color
+  }
   ngOnInit(): void {
   }
-  rotar(){
-      this.rotacion = this.rotacion - 180;
 
-
-    console.log(this.rotacion);
-  }
 
 }

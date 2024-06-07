@@ -1,9 +1,10 @@
+<div [ngStyle]="{'background-color': cambiocolor()}">
 <img [src]="url"
      draggable="false"
      [class.show]="show"
      [style.width.px]="width"
      [style.height.px]="height"
      [class.cover]="adjust"
-     [style.transform] = "'rotate(' + rotacion + 'deg)'"
-     (click)="rotar()">
+     (dblclick)="cambio()">
 <br>
+</div>

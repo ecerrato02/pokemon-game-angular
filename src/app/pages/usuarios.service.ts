@@ -6,13 +6,22 @@ import { Injectable } from '@angular/core';
 export class UsuariosService {
 
   nombre: string = ''
+  puntos: number = 0
   usuarios: string [] = []
   puntuacion: number = 0
   score: number [] = [];
   constructor() { }
 
+
+  getPuntosIniciales(){
+    return this.puntos;
+  }
+  guardarPuntos(puntos: number){
+    this.puntos = puntos;
+  }
   guardarNombre(nombre: string){
     this.nombre = nombre
+    console.log(nombre)
   }
   getNom(){
     return this.nombre;
