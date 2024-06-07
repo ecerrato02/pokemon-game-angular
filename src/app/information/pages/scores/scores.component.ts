@@ -11,6 +11,7 @@ puntuaciones: any [] = [];
 nombres: string [] = [];
 
 printNombres(){
+
   this.nombres = this.UsuariosService.getAllUsuarios();
 }
 printScores(){

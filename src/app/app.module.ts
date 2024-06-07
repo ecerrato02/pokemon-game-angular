@@ -11,6 +11,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { IniciarSessioCerratoComponent } from './pages/iniciar-sessio-cerrato/iniciar-sessio-cerrato.component';
 import {FormsModule} from "@angular/forms";
+import { IsessioCerratoComponent } from './isessio-cerrato/isessio-cerrato.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FormsModule} from "@angular/forms";
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    IniciarSessioCerratoComponent
+    IniciarSessioCerratoComponent,
+    IsessioCerratoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,11 @@
 <div id="formulario">
   <form #jugadorForm="ngForm">
-    <label for="nombreJugador">JUGADOR:</label>
+    <label for="nombreJugador"><strong>JUGADOR:</strong></label>
     <input type="text" id="nombreJugador" name="nombreJugador" ngModel required>
+    <label for="punts"><strong>PUNTS:</strong></label>
+    <input id="punts" type="text" required>
 
-    <button mat-raised-button color="primary" routerLink="/home" type="submit" class="breath" (click)="guardar()">
+    <button mat-raised-button color="primary" routerLink="/game" type="submit" class="breath" (click)="guardar()">
       JUGAR
     </button>
   </form>
